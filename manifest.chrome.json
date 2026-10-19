@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Love Quotes — for Mena",
+  "version": "1.0.0",
+  "description": "A little quote or reason every time you open the popup — filter by mood, keep favourites, copy one to send.",
+  "permissions": ["storage", "clipboardWrite"],
+  "action": {
+    "default_title": "Love Quotes",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}
