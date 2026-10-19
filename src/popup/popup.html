@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#140f1c">
+  <title>Love Quotes — for Mena</title>
+  <link rel="stylesheet" href="../common/theme.css">
+</head>
+<body>
+  <div class="app-head">
+    <span class="brand">&#9829; Love Quotes</span>
+    <span class="head-actions">
+      <button id="fav-btn" class="icon-btn" type="button" aria-label="Favourite this one" title="Favourite">&#9734;</button>
+      <button id="settings-btn" class="icon-btn" type="button" aria-label="Refresh" title="Another one">&#8635;</button>
+    </span>
+  </div>
+
+  <div class="field-row">
+    <label for="category">Mood</label>
+    <select id="category" aria-label="Category"></select>
+  </div>
+
+  <div class="card" id="card">
+    <p class="card-text" id="card-text">&nbsp;</p>
+    <span class="card-tag" id="card-tag"></span>
+  </div>
+
+  <div class="actions">
+    <button id="refresh-btn" class="btn btn-primary" type="button">Another &#8635;</button>
+    <button id="copy-btn" class="btn" type="button">Copy</button>
+  </div>
+
+  <div class="fav-head">
+    <span>Favourites</span>
+    <span id="fav-count">0</span>
+  </div>
+  <ul class="fav-list" id="fav-list"></ul>
+
+  <p class="note" id="note" aria-live="polite"></p>
+  <p class="foot">Made with love, just for you &#9829;</p>
+
+  <script src="../common/api.js"></script>
+  <script src="../common/data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
