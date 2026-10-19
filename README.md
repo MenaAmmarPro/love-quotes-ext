@@ -16,6 +16,7 @@ Works in **Chrome, Edge and Firefox** (Manifest V3) with no build step.
   and listed under the card. Tap a favourite to copy it, or `×` to remove it.
 - **Copy** — one tap puts the line on your clipboard.
 - **Refresh** — "Another ↻" (or the ↻ button) picks a different one.
+- **Keyboard** — while the popup is open: `n` next, `c` copy, `f` favourite.
 
 ## Storage key
 
