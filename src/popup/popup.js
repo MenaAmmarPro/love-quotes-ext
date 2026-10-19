@@ -288,6 +288,15 @@
       if (copy) copy.addEventListener("click", function () {
         copyText(current ? current.text : "");
       });
+
+      // Quick keys: N = another, C = copy, F = favourite.
+      document.addEventListener("keydown", function (ev) {
+        if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+        var key = String(ev.key || "").toLowerCase();
+        if (key === "n") { showNext(true); }
+        else if (key === "c") { copyText(current ? current.text : ""); }
+        else if (key === "f" && favBtn) { favBtn.click(); }
+      });
     });
   }
 
