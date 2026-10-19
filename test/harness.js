@@ -146,6 +146,11 @@ favs = NS.toggleFavourite(["a", "b"], "c");
 assert(favs.join(",") === "a,b,c", "toggleFavourite appends and keeps order");
 assert(NS.toggleFavourite(["a"], "a").join(",") === "", "toggleFavourite removes the only one");
 
+const many = [];
+for (let i = 0; i < NS.MAX_FAVS + 25; i += 1) many.push("line " + i);
+const capped = NS.normalizePrefs({ favourites: many });
+assert(capped.favourites.length === NS.MAX_FAVS, "normalizePrefs caps favourites at MAX_FAVS");
+
 /* ---------------- normalizePrefs ---------------- */
 let prefs = NS.normalizePrefs(null);
 assert(prefs.category === "all" && prefs.favourites.length === 0, "normalizePrefs defaults");
